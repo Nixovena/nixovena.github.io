@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ========== NAVBAR SCROLL ==========
+    // ===== NAVBAR SCROLL =====
     const navbar = document.getElementById('navbar');
-    if (navbar && !navbar.classList.contains('scrolled')) {
+    if (navbar) {
         const handleNavScroll = () => {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 10) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         handleNavScroll();
     }
 
-    // ========== MOBILE TOGGLE ==========
+    // ===== MOBILE TOGGLE =====
     const mobileToggle = document.getElementById('mobileToggle');
     const navLinks = document.getElementById('navLinks');
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ========== SCROLL REVEAL ==========
+    // ===== SCROLL REVEAL =====
     const revealElements = document.querySelectorAll('.reveal');
 
     if (revealElements.length > 0) {
@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
         });
 
         revealElements.forEach(el => revealObserver.observe(el));
     }
 
-    // ========== SMOOTH SCROLL ==========
+    // ===== SMOOTH SCROLL =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
@@ -72,34 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ========== PARTICLES ==========
-    const particlesContainer = document.getElementById('particles');
-
-    if (particlesContainer) {
-        const particleCount = 40;
-
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-
-            const size = Math.random() * 3 + 1;
-            const left = Math.random() * 100;
-            const duration = Math.random() * 20 + 15;
-            const delay = Math.random() * 20;
-            const opacity = Math.random() * 0.4 + 0.1;
-
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${left}%`;
-            particle.style.animationDuration = `${duration}s`;
-            particle.style.animationDelay = `${delay}s`;
-            particle.style.setProperty('--particle-opacity', opacity);
-
-            particlesContainer.appendChild(particle);
-        }
-    }
-
-    // ========== DOCS SIDEBAR ACTIVE STATE ==========
+    // ===== DOCS SIDEBAR ACTIVE STATE =====
     const docsSidebarLinks = document.querySelectorAll('.docs-sidebar-nav a');
 
     if (docsSidebarLinks.length > 0) {
@@ -117,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (docsSections.length > 0) {
             const updateActiveSidebarLink = () => {
-                const scrollPos = window.scrollY + 120;
+                const scrollPos = window.scrollY + 100;
                 let activeIdx = 0;
 
                 docsSections.forEach((item, idx) => {
@@ -135,41 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ========== COUNTER ANIMATION ==========
-    const counters = document.querySelectorAll('[data-count]');
-
-    if (counters.length > 0) {
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const target = entry.target;
-                    const count = parseInt(target.getAttribute('data-count'));
-                    let current = 0;
-                    const duration = 1500;
-                    const step = count / (duration / 16);
-
-                    const updateCounter = () => {
-                        current += step;
-                        if (current >= count) {
-                            target.textContent = count;
-                        } else {
-                            target.textContent = Math.floor(current);
-                            requestAnimationFrame(updateCounter);
-                        }
-                    };
-
-                    updateCounter();
-                    counterObserver.unobserve(target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        counters.forEach(counter => counterObserver.observe(counter));
-    }
-
-    // ========== NAVBAR ACTIVE LINK HIGHLIGHT ==========
+    // ===== NAVBAR ACTIVE LINK HIGHLIGHT =====
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinksAll = document.querySelectorAll('.navbar-links a:not(.navbar-cta)');
+    const navLinksAll = document.querySelectorAll('.navbar-links a');
 
     navLinksAll.forEach(link => {
         const href = link.getAttribute('href');
@@ -180,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ========== LIGHTBOX MODAL ==========
+    // ===== LIGHTBOX MODAL =====
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("img01");
     const closeBtn = document.querySelector(".close");
@@ -192,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
             img.addEventListener('click', function() {
                 modal.style.display = "flex";
                 modalImg.src = this.src;
-                // Avoid scrolling back to top when opening the modal
                 document.body.style.overflow = "hidden";
             });
         });
@@ -209,27 +149,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeModal();
             }
         });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
     }
 
 });
-
-// ========== CONTACT FORM HANDLER ==========
-function handleContactSubmit(e) {
-    e.preventDefault();
-
-    const form = document.getElementById('contactForm');
-    const success = document.getElementById('formSuccess');
-
-    if (form && success) {
-        form.style.display = 'none';
-        document.querySelector('.contact-form h3').style.display = 'none';
-        success.style.display = 'block';
-
-        setTimeout(() => {
-            form.reset();
-            form.style.display = 'block';
-            document.querySelector('.contact-form h3').style.display = 'block';
-            success.style.display = 'none';
-        }, 4000);
-    }
-}
