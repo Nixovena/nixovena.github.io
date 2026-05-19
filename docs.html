@@ -68,7 +68,7 @@
                         Nixovena distributions and their targeted use cases.</p>
 
                     <h3>Step 1: Choose a Distribution</h3>
-                    <p>Seven distributions are available, each designed for a specific use case:</p>
+                    <p>Eight distributions are available, each designed for a specific use case:</p>
                     <ul>
                         <li><strong>Zenclora OS</strong> &mdash; Zenclora is a Debian-based desktop Linux distribution
                             optimized for stability and daily use. Zenclora offers simplified package and system
@@ -91,7 +91,7 @@
                             built with a strict security-first approach. It uses a multi-layered defense model with
                             aggressive mitigations and extensive kernel-level hardening. Due to its highly restrictive
                             firewall policy, anonymization tools and certain network protocols are intentionally
-                            unsupported. The distribution includes there custom runtime security modules: Poison ,
+                            unsupported. The distribution includes there custom runtime security modules: Poison,
                             Xennytsu and Silencer. Beyond passive hardening, Slarpx focuses on active intervention,
                             sabotage, and destruction of attack paths when necessary.</li>
                         <li><strong>Linux Megamix</strong> &mdash; Linux Megamix is a Debian-based Linux distribution.
@@ -107,7 +107,16 @@
                             it also includes OSINT tools designed from the ground up specifically for Almighty Linux.
                             The distribution includes privacy and security tools to ensure Opsec security during
                             information gathering. Almighty also uses hardened kernel settings.</li>
-                        <li><strong>Ultra Performance Tuning</strong> &mdash; Ultra Performance Tuning is a Debian-based Linux distribution for deterministic, real-time (Real-Time) and low-latency workloads. At the core of the distribution is a fully preemptive PREEMPT_RT patched kernel, ensuring strict microsecond-level scheduling determinism. By employing CPU scheduler tuning, hardware interrupt (IRQ) affinity steering, and optimized virtual memory management parameters, Ultra Performance Tuning minimizes system and input latencies. The distribution features a lightweight, custom-tailored XFCE4 desktop environment that reduces system overhead. Ultra Performance Tuning is designed specifically for environments where timing precision and operational predictability are critical, such as professional digital audio workstations (DAW/Studio), high-precision robotics, industrial automation, and real-time data processing.</li>
+                        <li><strong>Ultra Performance Tuning</strong> &mdash; Ultra Performance Tuning is a Debian-based
+                            real-time Linux distribution designed for timing-critical, low-latency workloads. Featuring a
+                            fully preemptive PREEMPT_RT patched kernel, CPU scheduler tuning, and hardware IRQ affinity
+                            steering, it is optimized for professional digital audio workstations (DAW), robotics, and
+                            industrial automation.</li>
+                        <li><strong>Releng Machine</strong> &mdash; Releng Machine (LBuildstation) is a Debian-based
+                            custom operating system designed for Linux distribution development and ISO image generation.
+                            Serving as the build kitchen for Nixovena Labs, it automates multi-distro builds, minimizes
+                            compilation times, and simplifies packaging workflows. <em>(Note: This distribution is not
+                            publicly released yet).</em></li>
                     </ul>
 
 
@@ -247,6 +256,7 @@
                         <li><a href="index.html#distros">Linux Megamix</a></li>
                         <li><a href="index.html#distros">Almighty Linux</a></li>
                         <li><a href="index.html#distros">Ultra Performance Tuning</a></li>
+                        <li><a href="index.html#distros">Releng Machine</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

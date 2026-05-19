@@ -622,6 +622,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .distro-card-actions {
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .distro-card-actions .btn {
