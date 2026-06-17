@@ -70,6 +70,7 @@
                         <li><a href="#contributing">Contributing</a></li>
                         <li><a href="#cooperation">Cooperation</a></li>
                         <li><a href="#support">Support</a></li>
+                        <li><a href="#known-issues">Known Issues</a></li>
                         <li><a href="#legal">About & Legal</a></li>
                     </ul>
                 </aside>
@@ -83,7 +84,11 @@
                     <h3>Step 1: Choose a Distribution</h3>
                     <p>Eleven distributions are available, each designed for a specific use case:</p>
                     <ul>
-                        <li><strong>Logilocky AI Linux</strong> &mdash; Logilocky AI Linux is a Debian-based distribution. The goal of the distribution is to run offline AI models, provide a suitable environment for AI developers, make AI tools easily accessible, and offer an easy-to-use experience for Linux beginners. It features its own custom rich ecosystem and uses the MATE desktop environment.</li>
+                        <li><strong>Logilocky AI Linux</strong> &mdash; Logilocky AI Linux is a Debian-based
+                            distribution. The goal of the distribution is to run offline AI models, provide a suitable
+                            environment for AI developers, make AI tools easily accessible, and offer an easy-to-use
+                            experience for Linux beginners. It features its own custom rich ecosystem and uses the MATE
+                            desktop environment.</li>
                         <li><strong>Zenclora OS</strong> &mdash; Zenclora is a Debian-based desktop Linux distribution
                             optimized for stability and daily use. Zenclora offers simplified package and system
                             management commands to make Linux usage easier; it avoids unnecessary complexity while
@@ -100,25 +105,54 @@
                             professionals. Operating exclusively in Live mode, it provides a robust environment to
                             rescue failing systems, recover lost data, and manage disk infrastructures without the need
                             for installation.</li>
-                        <li><strong>Hardenwing OS</strong> &mdash; Hardenwing OS (formerly Hardened Slarpx) is a security-focused Linux distribution based on Debian's "Stable" branch. It adopts a multi-layered defense architecture against cyber attacks, incorporating aggressive mitigation techniques alongside kernel, system and network-hardening configurations. The distribution offers comprehensive security measures, including BadUSB protection, permission-hardening services, package manager hardening, module blacklisting, PAM and sudoers hardening. Due to its strict firewall policy, anonymisation tools are not supported; the system enforces Quad9 DNS and allows only basic internet access. Hardenwing OS boots into the standard Debian Installer which installs a customised GNOME desktop with Wayland display.</li>
-                        <li><strong>Overkill Linux</strong> (formerly Megamix) &mdash; Overkill Linux is a Debian-based Linux distribution that uses the KDE Plasma desktop environment. It offers customized editions tailored to every user type and need -- developers, gamers, multimedia creators, scientists, crypto users, engineers, and students. Through the Overkill System Manager, all required packages for each edition are downloaded and kernel settings are applied with a single click. The System Manager also provides ZRAM support, NVIDIA driver installation, package management, DNS configuration, browser installation, and general system administration tools. The goal of Overkill is to provide an effortless and fast workstation setup for every user. One ISO, install your preferred edition after boot, and your system is ready.</li>
+                        <li><strong>Hardenwing OS</strong> &mdash; Hardenwing OS (formerly Hardened Slarpx) is a
+                            security-focused Linux distribution based on Debian's "Stable" branch. It adopts a
+                            multi-layered defense architecture against cyber attacks, incorporating aggressive
+                            mitigation techniques alongside kernel, system and network-hardening configurations. The
+                            distribution offers comprehensive security measures, including BadUSB protection,
+                            permission-hardening services, package manager hardening, module blacklisting, PAM and
+                            sudoers hardening. Due to its strict firewall policy, anonymisation tools are not supported;
+                            the system enforces Quad9 DNS and allows only basic internet access. Hardenwing OS boots
+                            into the standard Debian Installer which installs a customised GNOME desktop with Wayland
+                            display.</li>
+                        <li><strong>Overkill Linux</strong> (formerly Megamix) &mdash; Overkill Linux is a Debian-based
+                            Linux distribution that uses the KDE Plasma desktop environment. It offers customized
+                            editions tailored to every user type and need -- developers, gamers, multimedia creators,
+                            scientists, crypto users, engineers, and students. Through the Overkill System Manager, all
+                            required packages for each edition are downloaded and kernel settings are applied with a
+                            single click. The System Manager also provides ZRAM support, NVIDIA driver installation,
+                            package management, DNS configuration, browser installation, and general system
+                            administration tools. The goal of Overkill is to provide an effortless and fast workstation
+                            setup for every user. One ISO, install your preferred edition after boot, and your system is
+                            ready.</li>
                         <li><strong>Almighty Linux</strong> &mdash; Almighty is a hybrid Linux distribution based on
                             Kali Linux. Almighty Linux comes pre-configured with a wide range of OSINT tools, and
                             it also includes OSINT tools designed from the ground up specifically for Almighty Linux.
                             The distribution includes privacy and security tools to ensure Opsec security during
                             information gathering. Almighty also uses hardened kernel settings.</li>
                         <li><strong>Ultra Performance Tuning</strong> &mdash; Ultra Performance Tuning is a Debian-based
-                            real-time Linux distribution designed for timing-critical, low-latency workloads. Featuring a
+                            real-time Linux distribution designed for timing-critical, low-latency workloads. Featuring
+                            a
                             fully preemptive PREEMPT_RT patched kernel, CPU scheduler tuning, and hardware IRQ affinity
                             steering, it is optimized for professional digital audio workstations (DAW), robotics, and
                             industrial automation.</li>
-                        <li><strong>Archanoxy</strong> &mdash; Archanoxy is a penetration testing focused GNU/Linux distribution built directly on top of Arch Linux and BlackArch Linux repositories. The operating system utilizes a lightweight, minimal Openbox Window Manager (WM), completely stripped of non-essential background processes to maximize hardware performance and user control. With a strong focus on terminal-centric workflows, Archanoxy provides a clean, raw environment where users can choose to install only the packages they need during or initialize toolsets in seconds through custom text installer interface.</li>
+                        <li><strong>Archanoxy</strong> &mdash; Archanoxy is a penetration testing focused GNU/Linux
+                            distribution built directly on top of Arch Linux and BlackArch Linux repositories. The
+                            operating system utilizes a lightweight, minimal Openbox Window Manager (WM), completely
+                            stripped of non-essential background processes to maximize hardware performance and user
+                            control. With a strong focus on terminal-centric workflows, Archanoxy provides a clean, raw
+                            environment where users can choose to install only the packages they need during or
+                            initialize toolsets in seconds through custom text installer interface.</li>
                         <li><strong>Releng Machine</strong> &mdash; Releng Machine (LBuildstation) is a Debian-based
-                            custom operating system designed for Linux distribution development and ISO image generation.
+                            custom operating system designed for Linux distribution development and ISO image
+                            generation.
                             Serving as the build kitchen for Nixovena Labs, it automates multi-distro builds, minimizes
                             compilation times, and simplifies packaging workflows. <em>(Note: This distribution is not
-                            publicly released yet).</em></li>
-                        <li><strong>Linoutrox</strong> &mdash; Linoutrox is a minimal Debian-based Linux distribution designed with the pure philosophy of minimalism. Utilizing the lightweight Openbox Window Manager, it is completely stripped of distractions and provides only essential applications alongside custom configuration tools.</li>
+                                publicly released yet).</em></li>
+                        <li><strong>Linoutrox</strong> &mdash; Linoutrox is a minimal Debian-based Linux distribution
+                            designed with the pure philosophy of minimalism. Utilizing the lightweight Openbox Window
+                            Manager, it is completely stripped of distractions and provides only essential applications
+                            alongside custom configuration tools.</li>
                     </ul>
 
 
@@ -136,15 +170,19 @@
                     <p>Send an email via the Contact page.</p>
 
                     <h3>What is the base of the distributions?</h3>
-                    <p>Most distributions are Debian-based, with the exception of Archanoxy, which is built directly on top of Arch Linux and BlackArch Linux repositories.</p>
+                    <p>Most distributions are Debian-based, with the exception of Archanoxy, which is built directly on
+                        top of Arch Linux and BlackArch Linux repositories.</p>
 
                     <h3>Does it work on UEFI?</h3>
                     <p>Yes. The distributions are both BIOS and UEFI compatible.</p>
 
                     <h3>How are the distributions built?</h3>
-                    <p>Debian-based distributions such as Zenclora, Fishy OS, and Lengtoolkit Live are built using Debian Live-Build, while Archanoxy is built using Archiso.</p>
+                    <p>Debian-based distributions such as Zenclora, Fishy OS, and Lengtoolkit Live are built using
+                        Debian Live-Build, while Archanoxy is built using Archiso.</p>
 
-                    <p>Releng Machine, a specialized performance-oriented Linux distribution, is utilized for deployment build processes. Thanks to the automation tools within Releng Machine, multiple distributions are automatically built and deployed to servers.</p>
+                    <p>Releng Machine, a specialized performance-oriented Linux distribution, is utilized for deployment
+                        build processes. Thanks to the automation tools within Releng Machine, multiple distributions
+                        are automatically built and deployed to servers.</p>
 
                     <h3>Is AI used in distribution development?</h3>
                     <p>Yes. AI is used to streamline processes and for some automation. Additionally, some scripts are
@@ -196,7 +234,66 @@
                         <li><strong>AI Assistants:</strong> You can query AI assistants using terminal outputs or error
                             logs to quickly diagnose and troubleshoot common Linux/Debian problems.</li>
                     </ul>
-                    
+
+                    <h2 id="known-issues">Known Issues</h2>
+
+                    <h3>Network Configuration Screen Freeze</h3>
+                    <p>
+                        Some users may experience freezes or hangs on the
+                        <strong>"Network Configuration"</strong> screen during installation when
+                        using DD-WRT routers or IPv6-enabled networks.
+                    </p>
+
+                    <p><strong>Workarounds:</strong></p>
+                    <ul>
+                        <li>Add <code>ipv6.disable=1</code> to the <strong>Install</strong> boot parameter.</li>
+                        <li>Temporarily unplug the Ethernet cable while on the <strong>Network Configuration</strong>
+                            screen.</li>
+                    </ul>
+
+                    <h3>Secure Boot Issues</h3>
+                    <p>
+                        On some systems, the installed operating system may fail to boot when Secure Boot is enabled.
+                    </p>
+                    <ul>
+                        <li>Disable Secure Boot in your UEFI firmware settings before installation.</li>
+                    </ul>
+
+                    <h3>NVIDIA Black Screen</h3>
+                    <p>
+                        Certain NVIDIA graphics cards may display a black screen during boot or after installation.
+                    </p>
+                    <ul>
+                        <li>Boot using the <code>nomodeset</code> kernel parameter.</li>
+                        <li>Install the recommended NVIDIA driver after installation.</li>
+                    </ul>
+
+                    <h3>Wireless Adapter Not Detected</h3>
+                    <p>
+                        Some Wi-Fi adapters require proprietary firmware packages.
+                    </p>
+                    <ul>
+                        <li>Use an Ethernet connection during installation.</li>
+                        <li>Install the required firmware package after installation.</li>
+                    </ul>
+
+                    <h3>Virtual Machine Display Problems</h3>
+                    <p>
+                        Graphical glitches or incorrect screen resolutions may occur inside virtual machines.
+                    </p>
+                    <ul>
+                        <li>Install the guest additions/tools package provided by your virtualization software.</li>
+                    </ul>
+
+                    <h3>Slow First Boot</h3>
+                    <p>
+                        The first boot after installation may take longer than expected while system initialization
+                        tasks are completed.
+                    </p>
+                    <ul>
+                        <li>Allow the process to finish. Subsequent boots should be faster.</li>
+                    </ul>
+
                     <h2 id="legal">About & Legal</h2>
                     <p><strong>Disclaimer:</strong> All distributions provided by Nixovena Linux & AI Labs are offered
                         "as is", without warranty of any kind, express or implied. Nixovena Linux & AI Labs is not
